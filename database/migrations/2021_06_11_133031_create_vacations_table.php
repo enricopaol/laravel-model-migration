@@ -15,6 +15,12 @@ class CreateVacationsTable extends Migration
     {
         Schema::create('vacations', function (Blueprint $table) {
             $table->id();
+            $table->string('luogo', 30);
+            $table->string('durata', 20);
+            $table->tinyInteger('numero_persone');
+            $table->string('alloggio');
+            $table->float('prezzo', 8, 2); 
+            $table->text('descrizione');
             $table->timestamps();
         });
     }
